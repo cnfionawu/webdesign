@@ -1,0 +1,266 @@
+body{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin:0;
+
+    font-family: 'Manrope', sans-serif;
+}
+#container1{
+    height: 800px;
+}
+
+#nav{
+    display: flex;
+    flex-direction: row;
+    margin-left: 70%;
+    color: white;
+    font-size: 20px;
+    font-weight:400;
+    
+}
+.nav1{
+    margin-top: 5%;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.nav2{
+    margin-left: 40%;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+@keyframes rotate1 {
+    100% {transform: rotate(360deg);}
+}
+@keyframes rotate2 {
+    100% {transform: rotate(-360deg);}
+}
+@keyframes rotate3 {
+    100% {transform: rotateX(180deg) rotateY(90deg) rotateZ(90deg)}
+}
+@keyframes rotate4 {
+    100% {transform: rotateX(360deg) rotateY(40deg) rotateZ(0deg)}
+}
+#square{
+    object-position: 50% 50%;
+}
+.square1{
+    position:absolute;
+    height: 920px;
+    width: 920px;
+    border-style: solid;
+    border-color: white;
+    margin-left: 18%;
+
+    animation: rotate1 10s linear infinite 0s ;
+}
+.square2{
+    position:absolute;
+    height: 1250px;
+    width: 1250px;
+    border-style: solid;
+    border-color: white;
+    margin-left: 5%;
+    margin-top: -5%;
+    
+
+    animation: rotate2 15s linear infinite 0s ;
+}
+
+#intro{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 200px;
+    margin-left: 1%;
+    color: white;
+}
+h1{
+    font-size: 70px;
+}
+.hi{
+    font-weight: 800;
+}
+.I{
+    padding-left: 8px;
+    font-weight: 300;
+}
+#arrow{
+    cursor: pointer;
+}
+ 
+.line1{
+    position: absolute;
+    width: 30px;
+    height: 0px;
+    left: 690px;
+    top: 760px;
+    border: 3px solid #FFFFFF;
+    transform: rotate(42.93deg);
+    
+}
+.line2{
+    position: absolute;
+    width: 30px;
+    height: 0px;
+    left: 714px;
+    top: 760px;
+    border: 3px solid #FFFFFF;
+    transform: rotate(-42.27deg);
+    
+    
+}
+#spacer{
+    background-color: black;
+    box-sizing: border-box;
+    height: 700px;
+    margin-top: 330px;
+    mix-blend-mode:luminosity;
+}
+
+#abox{
+    position:relative;
+    margin-left: 49%;
+    margin-top: 16%;
+    height: 60px;
+    width: 60px;
+
+    transform-style: preserve-3d;
+    transform: rotateX(240deg) rotateY(-5deg) rotateZ(-150deg);
+
+    animation: rotate3 3s linear infinite both alternate ;
+    cursor: pointer;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    position: absolute;   
+    
+}
+.box_top{
+    transform: translateZ(-64px);
+    background: #EBEBEB;
+    
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    
+    
+}
+.box_bottom{
+    transform: translateZ(0px);
+    background: #EBEBEB;
+   
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    
+    
+}
+.box_front{
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    background: #6A6A6A;
+    opacity: 80%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+
+}
+.box_back{
+    transform: rotateY(-90deg) translateX(-32px) translateZ(31px);
+    transform-origin: bottom;
+    background: #6A6A6A;
+    opacity: 80%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+
+}
+.box_left{
+    transform: translateZ(-64px) rotateY(90deg);
+    transform-origin: right;
+    background: #B2B2B2;
+   
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+
+}
+#abox:hover{
+    animation: rotate4 1s linear infinite both alternate;
+}
+
+
+.work{
+    position: relative;
+    
+}
+
+.overlay{
+    position: absolute;
+    background-color: black;
+    opacity: 0;
+    transition: 0.3s;
+    width: 100%;
+    height: 420px;
+    top: 0px;
+}
+.description{
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    color: white;
+    opacity: 0;
+}
+h2{
+    font-size: 50px;
+    margin-bottom: -3%;
+    cursor: pointer;
+}
+p{
+    font-size: 25px;
+}
+.p2{
+    margin-top: 6%;
+}
+.work:hover .overlay{
+    opacity:0.4;
+}
+.work:hover .description{
+    opacity:1;
+}
+
+
+.white-mode {
+    background: #E2E2E2;
+    
+  }
+  
+  .white-mode #nav {
+    color: black;
+  }
+  .white-mode .nav1 {
+    color: black;
+  }
+  
+  .white-mode h1 {
+    color: black;
+  }
+  
+  .white-mode .line1{
+    border: 3px solid black;
+  }
+  .white-mode .line2{
+    border: 3px solid black;
+  }
+  
+  .white-mode .square1 {
+    border-color: black;
+  }
+  .white-mode .square2 {
+    border-color: black;
+  }
